@@ -121,7 +121,7 @@ let recipeCollection = [
 ];
 
 function filterSelection(category, diet, specialCategory) {
-  outputGridElement.innerHTML = ""; // Clear previous content
+  outputGridElement.innerHTML = "";
 
   for (let i = 0; i < recipeCollection.length; i++) {
     if (
@@ -135,18 +135,16 @@ function filterSelection(category, diet, specialCategory) {
 }
 document.addEventListener("DOMContentLoaded", function(){
 
-  /* Get page element references */
   recipeTitleElement = document.getElementById("pageTitle");
   outputGridElement = document.getElementById("outputGrid");
   projectDisplayElement = document.getElementById("projectDisplay");
 
-  /* Get URL Params */
   let queryString = window.location.search;
   let urlParams = new URLSearchParams(queryString);
   let urlSection = urlParams.get('section');
   let urlID = urlParams.get('id');
 
-  if (urlSection != "item") { /* Display project previews in grid */
+  if (urlSection != "item") {
 
     if (diet == "protein") {
       recipeTitleElement.innerText = "High Protein Recipes";
@@ -158,7 +156,6 @@ document.addEventListener("DOMContentLoaded", function(){
       recipeTitleElement.innerText = "High Calcium Recipes:";
     }
 
-    /* Create thumbnails for matching category, or all */
     for (let i = 0; i < recipeCollection.length; i++) {
       if (recipeCollection[i]["category"] == urlSection || urlSection == "" || urlSection == null){
         createProjectPreview(recipeCollection[i]);
@@ -167,7 +164,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
   }
   else {
-    /* Display individual project by trying to match the "ID" value */
     for (let i = 0; i < recipeCollection.length; i++) {
       if (recipeCollection[i]["id"] == urlID) {
         createProjectPage(recipeCollection[i]);
@@ -180,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 function createProjectPreview(incomingJSON) {
-
   let newPreviewLink = document.createElement("A");
   newPreviewLink.href = incomingJSON["link"];
 
@@ -192,11 +187,6 @@ function createProjectPreview(incomingJSON) {
   newPreviewThumbnail.src = incomingJSON["image"];
   newPreviewElement.appendChild(newPreviewThumbnail);
 
-  let newPreviewDiet = document.createElement("DIET");
-  newPreviewDiet.classList.add("previewDiet");
-  newPreviewDiet.innerText = incomingJSON["diet"];
-  newPreviewElement.appendChild(newPreviewDiet);
-
   let newPreviewTitle = document.createElement("P");
   newPreviewTitle.classList.add("previewTitle");
   newPreviewTitle.innerText = incomingJSON["itemTitle"];
@@ -207,8 +197,15 @@ function createProjectPreview(incomingJSON) {
   newPreviewData.innerText = incomingJSON["data"];
   newPreviewElement.appendChild(newPreviewData);
 
-  outputGridElement.appendChild(newPreviewLink);
+  let newLine = document.createElement("HR");
+  newPreviewElement.appendChild(newLine);
 
+  let newPreviewDiet = document.createElement("DIET");
+  newPreviewDiet.classList.add("previewDiet");
+  newPreviewDiet.innerText = incomingJSON["diet"];
+  newPreviewElement.appendChild(newPreviewDiet);
+
+  outputGridElement.appendChild(newPreviewLink);
 }
 
 function createProjectPage(incomingJSON) {
@@ -216,17 +213,19 @@ function createProjectPage(incomingJSON) {
 
   let newProjectElement = document.createElement("DIV");
 
-  let newProjectDiet = document.createElement("P");
-  newProjectDiet.classList.add("diet");
-  newProjectDiet.innerText = "Diet: " + incomingJSON["diet"];
-  newProjectElement.appendChild(newProjectDiet);
-
   if (incomingJSON["data"]) {
     let newProjectData = document.createElement("P");
     newProjectData.classList.add("data");
     newProjectData.innerText = "Data: " + incomingJSON["data"];
     newProjectElement.appendChild(newProjectData);
   }
+
+
+  let newProjectDiet = document.createElement("P");
+  newProjectDiet.classList.add("diet");
+  newProjectDiet.innerText = "Diet: " + incomingJSON["diet"];
+  newProjectElement.appendChild(newProjectDiet);
+
 
   if (incomingJSON["link"]) {
     let newProjectLink = document.createElement("A");

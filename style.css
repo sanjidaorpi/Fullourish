@@ -8,7 +8,7 @@
 	display: flex;
 	background-image: url('title.png');
   background-image: url('bg.png');
-	background-size:cover;
+  flex-direction: column;
   background-size:100%;
 }
 
@@ -18,6 +18,7 @@
   margin-left: 4%;
   margin-top: 4%;
   background-size: 35%;
+  margin-bottom: 10%;
 }
 
 #header {
@@ -29,7 +30,7 @@
 
 body {
 	margin: 0;
-	background-color: #F5FEC7
+	background-color: #F5FEC7;
 }
 
 .nav_wrapper {
@@ -37,14 +38,15 @@ body {
 	padding-top: 1.5%;
 	padding-bottom: 1.5%;
 	border-bottom: 0.2vh solid black;
-	/*background-color: #E9F1BD;*/
 	background-color: #FBFAEC;
 	position: fixed;
+	z-index: 1;
 }
 
 .nav_menu {
 	display: flex;
-	margin-left: 50%;
+	/* margin-left: 50%; for full nav */
+	margin-left: 70%;
 	justify-content: space-around;
 }
 
@@ -63,23 +65,28 @@ a:hover {
 	color: #ECC30B;
 }
 
-p {
-	color: #4C5A4A;
-}
+
 
 .statement {
 	font-family: Bitter;
-	line-height: 2rem;
+	line-height: 2.5rem;
 	font-size: 3.5vh;
-	font-style: italic;
-	background-color: #FBFAEC;
-	border: 0.2vh solid black;
-	padding: 2%;
-	border-radius: 2%;
-	margin-left: 30%;
-	margin-right: 30%;
-	margin-top: 15%;
-	margin-bottom: 15%;
+	background-color: #5F7356;
+	color: #FBFAEC;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	padding-left: 20%;
+	padding-right: 40%;
+	padding-top: 4%;
+	padding-bottom: 4%;
+	opacity: 0.9;
+	z-index: 0;
+}
+
+.statement:nth-child(even) {
+	padding-left: 40%;
+	padding-right: 20%;
 }
 
 .header {
@@ -95,7 +102,8 @@ p {
 	margin-left: 30%;
 	margin-right: 30%;
 	margin-top: 15%;
-	margin-bottom: 5%;
+	margin-bottom: 0;
+	z-index: -1;
 }
 
 .gridLayout {
@@ -124,7 +132,7 @@ p {
 }
 
 #outputGrid>a:hover {
-  background-color: rgba(255,0,225, 0.1);
+  background-color: #92A889;
 }
 
 .previewTitle {
@@ -161,6 +169,7 @@ form {
 .btn {
   border: none;
   outline: none;
+  border-radius: 10%;
   font-family: Bitter;
   padding: 10px 13px;
   margin: 2%;
@@ -170,9 +179,4 @@ form {
 
 .btn:hover {
   background-color: #92A889;
-}
-
-.btn.active {
-  background-color: #666;
-  color: white;
 }
