@@ -65,28 +65,43 @@ a:hover {
 	color: #ECC30B;
 }
 
-
-
 .statement {
 	font-family: Bitter;
 	line-height: 2.5rem;
-	font-size: 3.5vh;
-	background-color: #5F7356;
-	color: #FBFAEC;
+	font-size: 3vh;
+	background-color: #FBFAEC;
+	color: black;
 	margin-left: 0;
 	margin-right: 0;
 	margin-top: 0;
 	padding-left: 20%;
 	padding-right: 40%;
-	padding-top: 4%;
-	padding-bottom: 4%;
-	opacity: 0.9;
-	z-index: 0;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.statement:nth-last-child(4) {
+	padding-top: 5%;
+	border-top: 0.2vh solid black;
 }
 
 .statement:nth-child(even) {
 	padding-left: 40%;
 	padding-right: 20%;
+}
+
+.statement:nth-last-child(1) {
+	padding-bottom: 5%;
+	border-bottom: 0.2vh solid black;
+}
+
+.box {
+	padding-left: 6%;
+	padding-right: 6%;
+	background-color: white;
+	border: 0.2vh solid black;
+	border-radius: 2%;
+	box-shadow: 10px 10px 5px rgb(88,88,88);
 }
 
 .header {
@@ -95,7 +110,7 @@ a:hover {
 	line-height: 2rem;
 	font-size: 3.5vh;
 	font-style: italic;
-	background-color: #FBFAEC;
+	background-color: white;
 	border: 0.2vh solid black;
 	padding: 2%;
 	border-radius: 2%;
@@ -104,6 +119,7 @@ a:hover {
 	margin-top: 15%;
 	margin-bottom: 0;
 	z-index: -1;
+	box-shadow: 10px 10px 5px rgb(88,88,88);
 }
 
 .gridLayout {
@@ -118,6 +134,7 @@ a:hover {
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5vw;
   height: 30%;
+  margin-bottom: 8%;
 }
 
 #outputGrid>a, #outputGrid>a:visited {
@@ -129,6 +146,7 @@ a:hover {
   border-radius: 3px;
   background-color: #FBFAEC;
   height: 60vh;
+  box-shadow: 10px 10px 5px rgb(88,88,88);
 }
 
 #outputGrid>a:hover {
