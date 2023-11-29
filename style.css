@@ -198,3 +198,71 @@ form {
 .btn:hover {
   background-color: #92A889;
 }
+
+.loc_grid {
+		margin-right: 7%;
+		margin-left: 7%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	.food_img {
+		box-sizing: border-box;
+		width: 25%;
+		text-align: center;
+		margin-bottom: 4%;
+	}
+
+	.food_img img {
+		border-radius: 8px;
+		width: 80%;
+		height: 80%;
+		object-fit: cover;
+	}
+
+	.food_img p {
+		margin-top: 8px;
+	}
+
+
+	.container {
+  display: flex;
+  margin-top: 10%;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.profile {
+	width: 30%;
+	box-shadow: 10px 10px 5px rgb(88,88,88);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.about {
+  width: 30%; 
+  margin-left: 20px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 10px 10px 5px rgb(88,88,88);
+
+}
+
+.about h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.6;
+}
