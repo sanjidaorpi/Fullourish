@@ -1,78 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<title>Fullourish</title>
-
-	<link rel="stylesheet" href="style.css">
-
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bitter" />
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fullourish - Plant-based Nutrition Made Simple</title>
+	<meta name="description" content="Discover personalized plant-based recipes tailored to your dietary preferences and nutritional needs.">
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+	
+	<!-- AOS Animation Library -->
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+	
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+	<!-- Navigation Bar -->
+	<nav class="nav-wrapper">
+		<div class="nav-container">
+			<div class="nav-logo">
+				<a href="index.html" class="logo-text">Fullourish</a>
+			</div>
+			<div class="nav-menu">
+				<a href="index.html" class="nav-link">Home</a>
+				<a href="search.html" class="nav-link">Search</a>
+			</div>
+		</div>
+	</nav>
 
-	<!-- Home page: navigation bar -->
-	<div class="home_container"> 
-			<div class="nav_wrapper">
-				<div class="nav_menu">
-				  	<a id="nav" href="index.html"> Home </a>
-				  	<a id="nav" href="search.html">Search</a>
-					<a id="nav" href="book.html">Recipe Book</a>
-					<a id="nav" href="about.html">About</a>
+	<!-- Hero Section -->
+	<section class="hero-section">
+		<!-- Floating Veggies Background -->
+		<div class="floating-veggies">
+			<div class="floating-veggie veggie-1">
+				<img src="assets/images/turnip.png" alt="Turnip">
+			</div>
+			<div class="floating-veggie veggie-2">
+				<img src="assets/images/leek.png" alt="Leek">
+			</div>
+			<div class="floating-veggie veggie-3">
+				<img src="assets/images/tomato.png" alt="Tomato">
+			</div>
+			<div class="floating-veggie veggie-4">
+				<img src="assets/images/onion.png" alt="Onion">
+			</div>
+			<div class="floating-veggie veggie-5">
+				<img src="assets/images/carrot.png" alt="Carrot">
+			</div>
+		</div>
+		
+		<div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+			<h1 class="hero-title">Plant-based Nutrition & Inspiration</h1>
+			<p class="hero-subtitle">Discover delicious and nutritionally balanced recipes tailored to plant-based lifestyles.</p>
+			<div class="hero-cta">
+				<a href="search.html" class="cta-button">FIND RECIPES</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Features Section -->
+	<section class="features-section">
+		<div class="features-container">
+			<div class="features-grid">
+				<div class="feature-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+					<div class="feature-icon">
+						<img src="assets/images/redonion_mini.png" alt="Red Onion" class="feature-icon-img">
+					</div>
+					<h3 class="feature-title">Personalized Recipes</h3>
+					<p class="feature-description">Discover recipes tailored to your dietary preferences and nutritional needs.</p>
+				</div>
+				<div class="feature-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+					<div class="feature-icon">
+						<img src="assets/images/carrot_mini.png" alt="Carrot" class="feature-icon-img">
+					</div>
+					<h3 class="feature-title">Plant-Based Focus</h3>
+					<p class="feature-description">Explore a world of delicious, nutrient-rich plant-based cuisine.</p>
+				</div>
+				<div class="feature-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+					<div class="feature-icon">
+						<img src="assets/images/onion_mini.png" alt="Onion" class="feature-icon-img">
+					</div>
+					<h3 class="feature-title">Nutrition Optimized</h3>
+					<p class="feature-description">Every recipe is crafted to maximize health benefits and energy.</p>
 				</div>
 			</div>
-
-		<div class="title">
-			<div class="header">
-				<p>Finding plant-based recipes that provide essential nutrients can be challenging. Discover a world of vibrant, delicious, and nutritionally balanced recipes tailored to plant-based lifestyles. Fullourish's curated collection of plant-powered dishes ensures you enjoy a wholesome and satisfying meals effortlessly.</p>
-			</div>
 		</div>
+	</section>
 
-		<div class="back">
-			<div class="statement">
-				<section class="card" data-aos="fade-up-left">
-					<div class=box>
-						<p>Vegetarians and vegans may risk vitamin B12, vitamin D, iron, zinc and calcium deficiency as these micronutrients can mostly be found in animal foods or have a lower bioavailability in plant foods.</p>
-					</div>
-				</section>
-			</div>
-
-			<div class="statement">
-				<section class="card" data-aos="fade-up-right">
-					<div class=box>
-						<p>Most health conditions developed by vegans are related to vitamin B12 deficiency. Without the familiar sources of vitamin B12, certain bodily functions can be disrupted, leading to anemia, gastritis, stroke, Crohn's disease, and Celiac disease.</p>
-					</div>
-				</section>
-			</div>
-
-			<div class="statement">
-				<section class="card" data-aos="fade-up-left">
-					<div class=box>
-						<p>B12 and vitamins A and D are bounded to protein and calcium rich foods. Anywhere from 10% to 35% of your calories should come from protein. If your needs are 2,000 calories, that's 200–700 calories from protein, or 50–175 grams. This can be difficult to achieve on a plant-based diet, without the right guidance.</p>
-					</div>
-				</section>
-			</div>
-
-			<div class="statement">
-				<section class="card" data-aos="fade-up-right">
-					<div class=box>
-						<p>Maintaining a balanced diet that incorporates essential nutrients like protein, fiber, and calcium is crucial for overall health and well-being. Fortunately, there are numerous recipes and foods that provide a combination of these nutrients. A well-rounded diet, rich in diverse nutrients, is key to maintaining good health.</p>
-					</div>
-				</section>
-			</div>
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer-content">
+			<p>&copy; 2025 Fullourish. All rights reserved.</p>
+			<p>Plant-based nutrition made simple.</p>
 		</div>
-			
-	</div>
+	</footer>
 
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script>
-	  AOS.init();
+		AOS.init({
+			duration: 1000,
+			easing: 'ease-out-cubic',
+			once: true
+		});
+		
+		// Test P5.js
+		window.addEventListener('load', function() {
+			console.log('Page loaded, checking P5.js...');
+			if (typeof createCanvas === 'function') {
+				console.log('P5.js is available');
+			} else {
+				console.log('P5.js is NOT available');
+			}
+		});
+
+		
+		function showInfoCard(index) {
+			const popup = document.getElementById('infoCardPopup');
+			const title = document.getElementById('popupTitle');
+			const content = document.getElementById('popupContent');
+			
+			title.textContent = foodData[index].title;
+			content.textContent = foodData[index].content;
+			
+			popup.classList.add('active');
+			document.body.style.overflow = 'hidden';
+		}
+		
+		function closeInfoCard() {
+			const popup = document.getElementById('infoCardPopup');
+			popup.classList.remove('active');
+			document.body.style.overflow = 'auto';
+		}
+		
+		// Close modal when clicking outside
+		document.getElementById('infoCardPopup').addEventListener('click', function(e) {
+			if (e.target === this) {
+				closeInfoCard();
+			}
+		});
+
+		// Close modal with Escape key
+		document.addEventListener('keydown', function(e) {
+			if (e.key === 'Escape') {
+				closeInfoCard();
+			}
+		});
+	</script>
+
+	<script>
+		// Veggie fade effect on scroll
+		document.addEventListener('DOMContentLoaded', function() {
+			const veggies = document.querySelectorAll('.floating-veggie');
+			
+			window.addEventListener('scroll', function() {
+				const scrollTop = window.pageYOffset;
+				const windowHeight = window.innerHeight;
+				
+				veggies.forEach(veggie => {
+					// Calculate fade based on scroll position - bidirectional fade
+					let opacity = 0.5; // Base opacity (matching CSS)
+					
+					// Start fading as you scroll down
+					if (scrollTop > 100) {
+						const fadeStart = 100;
+						const fadeEnd = 800; // Fade over 700px of scroll
+						const fadeProgress = Math.max(0, Math.min(1, (scrollTop - fadeStart) / (fadeEnd - fadeStart)));
+						
+						opacity = 0.5 * (1 - fadeProgress);
+					}
+					
+					// Apply the fade effect
+					veggie.style.opacity = Math.max(0, opacity);
+					
+					// Debug log to see if it's working
+					console.log('Scroll:', scrollTop, 'Opacity:', opacity);
+				});
+			});
+		});
 	</script>
 
 </body>

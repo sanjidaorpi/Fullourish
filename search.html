@@ -1,47 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Search for plant-based recipes on Fullourish. Filter by diet type and nutrition focus to find the perfect recipe for your needs.">
 
-	<title>Fullourish</title>
+	<title>Search Recipes - Fullourish</title>
 
-	<link rel="stylesheet" href="style.css">
-
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Bitter" />
-
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-	<!-- Home page: navigation bar -->
-		<div class="main_container"> 
-			<div class="nav_wrapper">
-				<div class="nav_menu">
-				  	<a id="nav" href="index.html"> Home </a>
-				  	<a id="nav" href="search.html">Search</a>
-					<a id="nav" href="book.html">Recipe Book</a>
-					<a id="nav" href="about.html">About</a>
-				</div>
+	<!-- Navigation Bar -->
+	<nav class="nav-wrapper">
+		<div class="nav-container">
+			<div class="nav-logo">
+				<a href="index.html" class="logo-text">Fullourish</a>
 			</div>
-
-			<div class="title">
-				<div class="header">
-					<p>Search for recipes</p>
-				</div>
+			<div class="nav-menu">
+				<a href="index.html" class="nav-link">Home</a>
+				<a href="search.html" class="nav-link">Search</a>
 			</div>
-
-			<form action="/search" method="POST">
-				<input type="text" name="query" placeholder="Search">
-				<button type="submit">Search Recipe</button>
-			</form>
-
 		</div>
+	</nav>
 
+	<!-- Main Content -->
+	<main class="search-main">
+		<!-- Hero Section -->
+		<section class="search-hero">
+			<div class="search-hero-container">
+				<h1 class="search-hero-title">Find A Recipe</h1>
+				<p class="search-hero-subtitle">Find inspiration for plant-based recipes tailored to your dietary preferences and nutritional needs.</p>
+			</div>
+		</section>
 
-	<script src="search.js" charset="utf-8"></script>
+		<!-- Search and Filters Section -->
+		<section class="search-filters-section">
+			<div class="search-container">
+				
+				<!-- Diet Type Filters -->
+				<div class="filter-section">
+					<div class="filter-buttons">
+						<h3 class="filter-title">Diet Type</h3>
+						<button class="filter-btn active" onclick="setDietFilter('all')">Show All</button>
+						<button class="filter-btn" onclick="setDietFilter('pescatarian')">Pescatarian</button>
+						<button class="filter-btn" onclick="setDietFilter('vegetarian')">Vegetarian</button>
+						<button class="filter-btn" onclick="setDietFilter('vegan')">Vegan</button>
+						<button class="filter-btn" onclick="setDietFilter('gluten-free')">Gluten-Free</button>
+						<button class="filter-btn" onclick="setDietFilter('dairy-free')">Dairy-Free</button>
+					</div>
+				</div>
+				
+				<!-- Nutrition Focus Filters -->
+				<div class="filter-section">
+					<div class="filter-buttons">
+						<h3 class="filter-title">Nutrition Focus</h3>
+						<button class="filter-btn active" onclick="setNutritionFilter('all')">Show All</button>
+						<button class="filter-btn" onclick="setNutritionFilter('high-protein')">High Protein</button>
+						<button class="filter-btn" onclick="setNutritionFilter('high-fiber')">High Fiber</button>
+						<button class="filter-btn" onclick="setNutritionFilter('high-calcium')">High Calcium</button>
+						<button class="clear-filters-btn" onclick="clearAllFilters()">Clear All Filters</button>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<!-- Results Section -->
+		<section class="results-section">
+			<div class="results-container">
+				<div id="outputGrid"></div>
+				<div id="projectDisplay"></div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer-content">
+			<p>&copy; 2025 Fullourish. All rights reserved.</p>
+			<p>Plant-based nutrition made simple.</p>
+		</div>
+	</footer>
+
+	<script src="js/config.js" charset="utf-8"></script>
+	<script src="js/api.js" charset="utf-8"></script>
+	<script src="js/script.js" charset="utf-8"></script>
 </body>
 
 </html>
